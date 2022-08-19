@@ -22,9 +22,13 @@ import {Footer} from '../../components/Footer';
 import {Slider} from '../../components/Slider';
 import {useState} from 'react';
 
-const HomePage = ({pageName, notifier}) => {
-  const gutter = `1rem`;
+import eyeCatchImage1 from '../../assets/dinner-for-one-of-wood-fired-pizza-paired-with-cold-beer.jpg';
+import eyeCatchImage2 from '../../assets/fine-food-dining-in-style.jpg';
+import eyeCatchImage3 from '../../assets/dinner-party.jpg';
+import eyeCatchImage4 from '../../assets/restaurant-breakfast.jpg';
+import {Form} from '../../components/Form';
 
+const HomePage = ({pageName, notifier}) => {
   return (
     <Layout pageName={pageName} notifier={notifier}>
       <section
@@ -84,9 +88,116 @@ const HomePage = ({pageName, notifier}) => {
           <SwiperSlide>
             <Slider />
           </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide
+            className={cx(
+              css`
+                @media (max-width: 1100px) {
+                  flex-direction: column;
+                  > .left {
+                    order: 2;
+                  }
+                  > .right {
+                    order: 1;
+                  }
+                }
+              `,
+              `flex justify-center items-center gap-10`
+            )}
+          >
+            <div className="left">
+              <img
+                src={eyeCatchImage1}
+                alt={'eyeCatchImage1'}
+                className={css`
+                  width: 450px;
+                  @media (max-width: 768px) {
+                    width: 320px;
+                  }
+                  display: block;
+                `}
+              />
+            </div>
+            <div className={`right`}>
+              <h2 className="text-2xl flex items-center justify-center">
+                What's Today Dinner?
+              </h2>
+              <p className="text-lg flex items-center justify-center">
+                Let's bebop search!
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide
+            className={cx(
+              css`
+                @media (max-width: 1100px) {
+                  flex-direction: column;
+                  > .left {
+                    order: 1;
+                  }
+                  > .right {
+                    order: 2;
+                  }
+                }
+              `,
+              `flex justify-center items-center gap-10`
+            )}
+          >
+            <div className="left">
+              <h2 className="text-2xl flex items-center justify-center">
+                What's Tomorrow Dinner?
+              </h2>
+              <p className="text-lg flex items-center justify-center">
+                Let's bebop search!
+              </p>
+            </div>
+            <div className={`right`}>
+              <img
+                src={eyeCatchImage2}
+                alt={'eyeCatchImage2'}
+                className={css`
+                  width: 250px;
+                  @media (max-width: 768px) {
+                    width: 180px;
+                  }
+                  display: block;
+                `}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide
+            className={cx(
+              css`
+                @media (max-width: 1100px) {
+                  flex-direction: column;
+                  > .left {
+                    order: 2;
+                  }
+                  > .right {
+                    order: 1;
+                  }
+                }
+              `,
+              `flex justify-center items-center gap-10`
+            )}
+          >
+            <div className="left px-2">
+              <Form />
+            </div>
+            <div className={`right`}>
+              <h2 className="text-2xl">Now Create Account!</h2>
+              <img
+                src={eyeCatchImage3}
+                alt={'eyeCatchImage3'}
+                className={css`
+                  width: 450px;
+                  @media (max-width: 768px) {
+                    display: none;
+                  }
+                  display: block;
+                `}
+              />
+            </div>
+          </SwiperSlide>
           <SwiperSlide className="flex justify-center items-center">
             <Footer />
           </SwiperSlide>

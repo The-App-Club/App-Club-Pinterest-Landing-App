@@ -17,7 +17,9 @@ const Title = ({tik, text}) => {
         <AnimatePresence>
           {tik && (
             <Layout>
-              <h2 className="text-3xl font-bold p-4">{text}</h2>
+              <h2 className="flex items-center justify-center text-3xl p-4">
+                {text}
+              </h2>
             </Layout>
           )}
         </AnimatePresence>

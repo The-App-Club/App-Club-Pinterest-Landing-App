@@ -68,9 +68,9 @@ const Slider = () => {
               doAnimate={tik}
               data={data1}
               className={css`
-                max-height: 40rem;
+                max-height: 32rem;
                 @media (max-width: 768px) {
-                  max-height: 20rem;
+                  max-height: 24rem;
                 }
               `}
             />
@@ -82,9 +82,9 @@ const Slider = () => {
               doAnimate={tik}
               data={data2}
               className={css`
-                max-height: 40rem;
+                max-height: 32rem;
                 @media (max-width: 768px) {
-                  max-height: 20rem;
+                  max-height: 24rem;
                 }
               `}
             />
@@ -96,9 +96,9 @@ const Slider = () => {
               doAnimate={tik}
               data={data3}
               className={css`
-                max-height: 40rem;
+                max-height: 32rem;
                 @media (max-width: 768px) {
-                  max-height: 20rem;
+                  max-height: 24rem;
                 }
               `}
             />
@@ -110,9 +110,9 @@ const Slider = () => {
               doAnimate={tik}
               data={data4}
               className={css`
-                max-height: 40rem;
+                max-height: 32rem;
                 @media (max-width: 768px) {
-                  max-height: 20rem;
+                  max-height: 24rem;
                 }
               `}
             />
