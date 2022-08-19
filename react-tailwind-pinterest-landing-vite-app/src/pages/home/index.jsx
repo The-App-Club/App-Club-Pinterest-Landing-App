@@ -12,27 +12,24 @@ import SwiperCore, {
 } from 'swiper';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
 
-import img1 from '../../assets/dinner-for-one-of-wood-fired-pizza-paired-with-cold-beer.jpg';
-import img2 from '../../assets/dinner-party.jpg';
-import img3 from '../../assets/restaurant-breakfast.jpg';
 import {Footer} from '../../components/Footer';
-
-// SwiperCore.use([Mousewheel,Keyboard]);
+import {Slider} from '../../components/Slider';
+import {useState} from 'react';
 
 const HomePage = ({pageName, notifier}) => {
+  const gutter = `1rem`;
+
   return (
     <Layout pageName={pageName} notifier={notifier}>
       <section
         className={cx(
-          `max-w-7xl mx-auto w-full relative pt-12 px-2`,
+          `max-w-7xl mx-auto w-full relative pt-12`,
           css`
             max-width: 100%;
             min-height: 100vh;
@@ -40,9 +37,7 @@ const HomePage = ({pageName, notifier}) => {
           `
         )}
       >
-        {/* <h2 className="text-3xl flex items-center justify-center">HomePage</h2> */}
         <Swiper
-          // install Swiper modules
           modules={[
             Navigation,
             Pagination,
@@ -54,14 +49,13 @@ const HomePage = ({pageName, notifier}) => {
           spaceBetween={50}
           slidesPerView={1}
           direction={'vertical'}
-          // navigation
-          speed={600}
+          speed={700}
           mousewheel={true}
           keyboard={true}
           pagination={{clickable: true}}
-          scrollbar={{draggable: true}}
+          // scrollbar={{draggable: true}}
           onSwiper={(swiper) => {
-            console.log(swiper);
+            console.log(`mount`);
           }}
           onSlideChange={() => {
             console.log('slide change');
@@ -77,13 +71,19 @@ const HomePage = ({pageName, notifier}) => {
                 width: 100%;
                 height: calc(100vh - 3rem);
                 .swiper-slide {
+                  padding: 0 9rem;
+                  @media (max-width: 768px) {
+                    padding: 0 1rem;
+                  }
                 }
               }
             `,
             ``
           )}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>
+            <Slider />
+          </SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
           <SwiperSlide>Slide 3</SwiperSlide>
           <SwiperSlide>Slide 4</SwiperSlide>
