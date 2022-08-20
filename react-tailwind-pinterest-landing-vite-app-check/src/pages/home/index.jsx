@@ -37,6 +37,7 @@ const HomePage = ({pageName, notifier}) => {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
+    handleResize();
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -86,8 +87,7 @@ const HomePage = ({pageName, notifier}) => {
               height: 100%;
               .swiper-wrapper {
                 width: 100%;
-                min-height: 100vh; /* Fallback */
-                min-height: calc(var(--vh, 1vh) * 100);
+                height: calc(calc(var(--vh, 1vh) * 100) - 3rem);
                 .swiper-slide {
                   padding: 0 9rem;
                   @media (max-width: 768px) {
