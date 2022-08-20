@@ -85,7 +85,7 @@ const HomePage = ({pageName, notifier}) => {
             ``
           )}
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <Slider />
           </SwiperSlide>
           <SwiperSlide>
@@ -93,7 +93,7 @@ const HomePage = ({pageName, notifier}) => {
           </SwiperSlide>
           <SwiperSlide>
             <Tomorrow />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <CreateAccount doFocus={doFocus} />
           </SwiperSlide>
