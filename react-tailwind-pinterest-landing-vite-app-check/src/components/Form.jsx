@@ -64,9 +64,9 @@ const Form = () => {
     }
     console.log(`correctEmail, correctPassword`, correctEmail, correctPassword);
     setLoading(true);
+    setDisabled(true);
     setTimeout(() => {
       setShowSuccessMessage('Nice work!');
-      setDisabled(true);
       setLoading(false);
     }, 1300);
   };
