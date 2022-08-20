@@ -54,7 +54,7 @@ const HomePage = ({pageName, notifier}) => {
           speed={700}
           mousewheel={true}
           keyboard={true}
-          pagination={{clickable: true}}
+          pagination={{clickable: false}}
           // scrollbar={{draggable: true}}
           onSwiper={(swiper) => {
             // console.log(`mount`);
