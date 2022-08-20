@@ -35,7 +35,7 @@ const MenuItem = ({path, menuTitle, icon}) => {
           align-items: center;
           padding-left: 1rem;
         `,
-        'hover:border-l-2 hover:border-blue-900 hover:bg-gray-100 hover:cursor-pointer gap-2'
+        'hover:border-l-2 border-l-2 border-transparent hover:border-blue-900 hover:bg-gray-100 hover:cursor-pointer gap-2'
       )}
       onClick={(e) => {
         navigate(path, {

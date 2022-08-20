@@ -38,14 +38,14 @@ const Slider = () => {
         <Splide
           onMove={(e) => {
             setTik(false);
-            console.log(`move`);
+            // console.log(`move`);
           }}
           onMoved={(e) => {
             setTik(true);
-            console.log(`moved`);
+            // console.log(`moved`);
           }}
           onVisible={(e) => {
-            console.log(`visible`);
+            // console.log(`visible`);
             setActiveSlideIndex(e.index);
           }}
           className={css`

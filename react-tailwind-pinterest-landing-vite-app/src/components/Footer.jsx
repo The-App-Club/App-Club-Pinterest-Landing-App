@@ -20,12 +20,11 @@ const MenuItem = ({path, menuTitle, icon}) => {
       className={cx(
         css`
           width: 100%;
-          min-height: 3rem;
           display: flex;
           justify-content: flex-start;
           align-items: center;
         `,
-        'flex items-center gap-1 hover:bg-gray-100 w-full hover:cursor-pointer hover:border-b-2 hover:border-blue-900'
+        'p-2 flex items-center gap-2 hover:bg-gray-100 w-full hover:cursor-pointer border-b-2 border-transparent hover:border-blue-900'
       )}
       onClick={(e) => {
         navigate(path, {
@@ -44,9 +43,12 @@ const MenuItem = ({path, menuTitle, icon}) => {
 const Footer = () => {
   return (
     <footer
-      className={cx(css``, `flex justify-center flex-col items-center gap-2`)}
+      className={cx(
+        css``,
+        `w-full h-full flex justify-center flex-col items-center gap-2`
+      )}
     >
-      <Link to={'/'} className={`flex items-center gap-2 `}>
+      <Link to={'/'} className={`flex items-center gap-2`}>
         <img src={logo} alt={'logo'} className={`w-10`} />
         <h2 className="text-xl">Make YourSelf</h2>
       </Link>
@@ -90,8 +92,8 @@ const Footer = () => {
           }}
         />
       </ul>
-      <div className="flex flex-col items-center gap-1">
-        <div className="flex items-center gap-1">
+      <div className="flex flex-col items-center">
+        <div className="flex items-center gap-2">
           <FiTwitter
             size={24}
             className={'hover:cursor-pointer hover:text-blue-400'}
@@ -110,8 +112,7 @@ const Footer = () => {
           />
         </div>
         <div className="flex items-center">
-          <AiOutlineCopyright size={24} />
-          <span>Make YourSelf</span>
+          <span>@copyright Make YourSelf</span>
         </div>
       </div>
     </footer>

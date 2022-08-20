@@ -38,7 +38,7 @@ const Bebop = ({gutter = `1rem`, doAnimate, data, className}) => {
     const itemDomList = itemsDomRef.map((itemDomRef) => {
       return itemDomRef.current;
     });
-    console.log(`doAnimate`, doAnimate);
+    // console.log(`doAnimate`, doAnimate);
   }, [doAnimate]);
   return (
     <motion.div
