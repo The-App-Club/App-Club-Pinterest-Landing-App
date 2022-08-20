@@ -108,12 +108,12 @@ const HomePage = ({pageName, notifier}) => {
           <SwiperSlide>
             <Tomorrow />
           </SwiperSlide>
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <CreateAccount />
           </SwiperSlide>
           <SwiperSlide>
             <Footer />
-          </SwiperSlide> */}
+          </SwiperSlide>
         </Swiper>
       </section>
     </Layout>
