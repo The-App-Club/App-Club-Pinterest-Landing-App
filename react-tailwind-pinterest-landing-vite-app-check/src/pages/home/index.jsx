@@ -85,9 +85,9 @@ const HomePage = ({pageName, notifier}) => {
             ``
           )}
         >
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <Slider />
-          </SwiperSlide> */}
+          </SwiperSlide>
           <SwiperSlide>
             <Today />
           </SwiperSlide>
