@@ -62,7 +62,7 @@ const HomePage = ({pageName, notifier}) => {
           }}
           onSlideChange={(e) => {
             console.log('slide change', e.activeIndex);
-            setDoFocus(e.activeIndex === 3);
+            // setDoFocus(e.activeIndex === 3);
           }}
           onReachEnd={(e) => {
             // console.log(`end`);
@@ -90,10 +90,10 @@ const HomePage = ({pageName, notifier}) => {
           </SwiperSlide>
           <SwiperSlide>
             <Today />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <Tomorrow />
-          </SwiperSlide> */}
+          </SwiperSlide>
           <SwiperSlide>
             <CreateAccount doFocus={doFocus} />
           </SwiperSlide>
