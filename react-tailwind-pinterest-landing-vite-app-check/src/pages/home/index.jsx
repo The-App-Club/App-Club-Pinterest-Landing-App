@@ -51,6 +51,7 @@ const HomePage = ({pageName, notifier}) => {
           css`
             max-width: 100%;
             min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
             height: 100%;
           `
         )}
