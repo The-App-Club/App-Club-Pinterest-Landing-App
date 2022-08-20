@@ -8,10 +8,12 @@
 
 html,
 body {
-  .loading {
-    overflow: hidden;
-    touch-action: none;
-  }
+  overflow-x: hidden;
+  touch-action: none;
+  // .loading {
+  //   overflow: hidden;
+  //   touch-action: none;
+  // }
 }
 
 body {
