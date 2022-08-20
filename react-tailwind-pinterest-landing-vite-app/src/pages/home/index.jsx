@@ -24,6 +24,7 @@ import {useState} from 'react';
 import {Today} from '../../components/Today';
 import {Tomorrow} from '../../components/Tomorrow';
 import {CreateAccount} from '../../components/CreateAccount';
+import {Form} from '../../components/Form';
 
 const HomePage = ({pageName, notifier}) => {
   const [doFocus, setDoFocus] = useState(false);
@@ -36,6 +37,7 @@ const HomePage = ({pageName, notifier}) => {
             max-width: 100%;
             min-height: 100vh;
             height: 100%;
+            overflow: hidden;
           `
         )}
       >
@@ -72,6 +74,7 @@ const HomePage = ({pageName, notifier}) => {
               height: 100%;
               .swiper-wrapper {
                 width: 100%;
+                margin: 0 auto;
                 height: calc(100vh - 3rem);
                 .swiper-slide {
                   padding: 0 9rem;
