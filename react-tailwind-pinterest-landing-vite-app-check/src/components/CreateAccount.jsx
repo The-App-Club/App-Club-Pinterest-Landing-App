@@ -1,7 +1,7 @@
 import {css, cx} from '@emotion/css';
 import eyeCatchImage3 from '../assets/dinner-party.jpg';
 import {Form} from './Form';
-const CreateAccount = ({doFocus}) => {
+const CreateAccount = () => {
   return (
     <div
       className={cx(
@@ -46,7 +46,7 @@ const CreateAccount = ({doFocus}) => {
         <h2 className="text-2xl flex items-center justify-center pb-2">
           Now Create Account!
         </h2>
-        <Form doFocus={doFocus} />
+        <Form />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ import YupPassword from 'yup-password';
 import {Loading} from './Loading';
 YupPassword(yup);
 
-const Form = ({doFocus}) => {
+const Form = () => {
   const [loading, setLoading] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
@@ -143,14 +143,6 @@ const Form = ({doFocus}) => {
       return !prevState;
     });
   };
-
-  useEffect(() => {
-    if (doFocus && !showSuccessMessage) {
-      setTimeout(() => {
-        emailRef.current.focus();
-      }, 300);
-    }
-  }, [doFocus]);
 
   return (
     <form

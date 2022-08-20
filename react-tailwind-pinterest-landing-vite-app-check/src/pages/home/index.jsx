@@ -27,7 +27,6 @@ import {CreateAccount} from '../../components/CreateAccount';
 import {Form} from '../../components/Form';
 
 const HomePage = ({pageName, notifier}) => {
-  const [doFocus, setDoFocus] = useState(false);
   return (
     <Layout pageName={pageName} notifier={notifier}>
       <section
@@ -62,7 +61,6 @@ const HomePage = ({pageName, notifier}) => {
           }}
           onSlideChange={(e) => {
             console.log('slide change', e.activeIndex);
-            // setDoFocus(e.activeIndex === 3);
           }}
           onReachEnd={(e) => {
             // console.log(`end`);
@@ -95,7 +93,7 @@ const HomePage = ({pageName, notifier}) => {
             <Tomorrow />
           </SwiperSlide>
           <SwiperSlide>
-            <CreateAccount doFocus={doFocus} />
+            <CreateAccount />
           </SwiperSlide>
           <SwiperSlide>
             <Footer />
