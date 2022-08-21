@@ -181,7 +181,7 @@ const Form = () => {
           ref={emailRef}
           onChange={handleChangeEmail}
           onBlur={handleChangeEmail}
-          onKeyUp={handleChangeEmail}
+          // onKeyUp={handleChangeEmail}
         />
         {renderMessage({
           successMessage: showEmailSuccessMessage,
@@ -217,7 +217,7 @@ const Form = () => {
             ref={passwordRef}
             onChange={handleChangePassword}
             onBlur={handleChangePassword}
-            onKeyUp={handleChangePassword}
+            // onKeyUp={handleChangePassword}
           />
           {showPassword ? (
             <BsEye
